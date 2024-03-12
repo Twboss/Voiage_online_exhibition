@@ -1,0 +1,436 @@
+.section-padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.custom-block {
+    position: relative;
+    overflow: hidden;
+    padding: 70px 12%;
+    height: 100%;
+}
+
+.row.slick {
+    overflow: hidden;
+}
+
+.slick-center img {
+    transform: scale(1.3);
+    /* ขนาดภาพเมื่ออยู่ตรงกลาง (1.2 เป็นต้นอย่าง) */
+    transition: transform 0.5s ease-in-out;
+    /* เพื่อทำให้การเปลี่ยนขนาดเนื่องจากการเลื่อนนิดหน่อย */
+}
+
+.slick-carousel .slick-list {
+    overflow: visible;
+}
+
+.slick-slide {
+    margin: 50px 10px;
+    /* ระยะห่างระหว่างภาพ */
+}
+
+.slick-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.slick-dots {
+    position: relative;
+    z-index: 2;
+    /* กำหนดค่า z-index เพื่อให้ slick dots อยู่ด้านบนของภาพที่ขยายขึ้น */
+    top: -10px;
+}
+
+.slick-carousel .image {
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slick-carousel img {
+    width: 100%;
+    /* ทำให้ภาพมีความกว้างเต็มตาม container */
+    height: auto;
+    /* ทำให้ภาพปรับสัดส่วนตามความกว้าง */
+    width: 500px;
+    /* ไม่ให้ภาพเกินขนาด container */
+    height: 281px;
+    /* ไม่ให้ภาพเกินขนาด container */
+    object-fit: cover;
+}
+
+.slick-carousel .slick-active .image:nth-child(2) {
+    transform: scale(1.2);
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0px;
+}
+
+.slick-initialized .slick-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* import */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* import */
+
+
+/* Color Theme */
+
+$Color_Nilkan: rgb(0,
+8,
+11);
+$Color_Gray: rgb(64,
+64,
+64);
+$Color_Kulap: rgb(246,
+152,
+163);
+$Color_Khram: rgb(22,
+70,
+110);
+$Color_Lueamluang: rgb(230,
+217,
+146);
+$Color_Khaophong: rgb(241,
+237,
+228);
+$Color_white: rgb(255,
+255,
+255);
+
+/* Color Theme */
+
+h2 {
+    font-family: "Prompt", sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: $Color_Nilkan;
+    margin-bottom: 48px;
+}
+
+h4 {
+    font-family: "Prompt", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: $Color_Nilkan;
+    margin: 0 0 12px 0;
+}
+
+h5 {
+    font-family: "Prompt", sans-serif;
+    font-size: 24px;
+    font-weight: 500px;
+    color: $Color_Nilkan;
+    margin: 0 0 26px 0;
+}
+
+h6 {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: $Color_Khram;
+    margin: 0;
+    line-height: 1.5;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: $Color_Nilkan;
+    margin: 0 0 12px 0;
+    line-height: 1.5;
+}
+
+.object-behide {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    z-index: -2;
+    // รูปภาพสำหรับตกแต่งเว็ปไซต์
+}
+
+.button {
+    padding: 15px 0px;
+    border-radius: 30px;
+    border: solid $Color_Kulap;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    background-color: $Color_Kulap;
+    text-align: center;
+    cursor: pointer;
+    font-size: large;
+    a {
+        padding: 15px 40px;
+        font-family: 'Prompt';
+        font-size: 18px;
+        text-decoration: none;
+        color: $Color_white;
+    }
+    &:hover {
+        background-color: $Color_Khram;
+        border: solid $Color_Khram;
+    }
+}
+
+#section {
+    padding-bottom: 60px;
+    .video-background {
+        --bs-gutter-x: 0;
+        .video-box {
+            padding: 0;
+            .video-show {
+                object-fit: cover;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+#section_1 {
+    position: relative;
+    .object-behide {
+        top: -50%;
+        right: 0;
+        .behide-video {
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            z-index: -2;
+            img {
+                width: 80%;
+            }
+        }
+    }
+}
+
+#section_2 {
+    position: relative;
+    .ojt-box {
+        background-color: rgb(255, 255, 255, .2);
+        box-shadow: 0 25px 45px rgb(0, 0, 0, .2);
+        border: 2px solid rgb(255, 255, 255, .5);
+        border-right: 2px solid rgb(255, 255, 255, .2);
+        border-bottom: 2px solid rgb(255, 255, 255, .2);
+        backdrop-filter: blur(5px);
+        border: 2px solid $Color_Khram;
+        border-radius: 20%;
+        h4 {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 26px;
+            color: $Color_Khaophong;
+            -webkit-text-stroke: 2px $Color_Khram;
+        }
+    }
+    .object-behide {
+        top: -40%;
+        .img-behide {
+            position: absolute;
+            left: 50%;
+            top: 0%;
+            img {
+                opacity: 0.8;
+                width: 1100px;
+            }
+        }
+    }
+}
+
+#section_3 {
+    .toolkit-section {
+        padding-bottom: 60px;
+        .toolkit {
+            display: flex;
+            flex-direction: row;
+            .toolkit-box {
+                margin-right: 50px;
+                .head_toolkits {
+                    background-color: $Color_Khram;
+                    border-radius: 20px;
+                    padding: 10px;
+                    margin-bottom: 12px;
+                    h4 {
+                        color: $Color_Khaophong;
+                        margin: 0;
+                    }
+                }
+                .list {
+                    display: flex;
+                    flex-direction: row;
+                }
+            }
+            .line {
+                padding: 50px 2px;
+                margin: 0 10px;
+                background-color: $Color_Khram;
+            }
+        }
+    }
+    .target_group-section {
+        padding-top: 60px;
+    }
+}
+
+#section_4 {
+    position: relative;
+    .object-behide {
+        top: -10%;
+        .img-behide {
+            position: absolute;
+            right: 60%;
+            top: 20%;
+            img {
+                opacity: 0.8;
+                width: 800px;
+            }
+        }
+    }
+}
+
+#section_5 {
+    h5 {
+        color: $Color_Khram;
+        font-weight: bold;
+    }
+}
+
+#section_6 {
+    position: relative;
+    .box-other {
+        padding: 0 20px;
+        .glass-box {
+            border-radius: 25em;
+            background-color: rgb(255, 255, 255, .1);
+            box-shadow: 0 25px 45px rgb(0, 0, 0, .2);
+            border: 2px solid rgb(255, 255, 255, .5);
+            border-right: 2px solid rgb(255, 255, 255, .2);
+            border-bottom: 2px solid rgb(255, 255, 255, .2);
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            img {
+                width: 60%;
+            }
+            h4 {
+                font-size: 45px;
+                font-weight: bold;
+                margin: 12px 0;
+            }
+        }
+    }
+    .object-behide {
+        top: 30%;
+        height: 80%;
+        .img-behide {
+            position: absolute;
+            right: 50%;
+            top: 0%;
+            img {
+                opacity: 0.8;
+                width: 200%;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .slick-carousel1 {
+        display: block;
+    }
+    .video-show {
+        width: 100%;
+        height: 80vh;
+    }
+    .slick-dots {
+        top: 2px;
+    }
+    .slick-dots li button:before {
+        font-size: 12px;
+    }
+    .slick-carousel img {
+        width: 281px;
+        height: 281px;
+    }
+    h2 {
+        text-align: center;
+        font-size: 45px;
+    }
+    #section_1 {
+        .col-lg-5 {
+            margin-bottom: 48px;
+        }
+        .object-behide {
+            height: 1000px;
+            top: -20%;
+            .behide-video {
+                top: 0%;
+                left: 0%;
+                img {
+                    width: 150%;
+                }
+            }
+        }
+    }
+    #section_3 {
+        .toolkit-section {
+            .toolkit {
+                flex-direction: column;
+                .toolkit-box {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .col-lg-5 {
+            margin-top: 48px;
+        }
+    }
+    #section_5 {
+        img {
+            margin-bottom: 48px;
+        }
+        .botton-box {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    #section_6 {
+        .container {
+            h2 {
+                margin: 0;
+            }
+            .row {
+                .box-other {
+                    .glass-box {
+                        h4 {
+                            font-size: 40px;
+                        }
+                    }
+                }
+            }
+        }
+        .object-behide {
+            height: 70%;
+            .img-behide {
+                top: 50%;
+                img {
+                    width: 300%;
+                }
+            }
+        }
+    }
+}

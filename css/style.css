@@ -1,0 +1,76 @@
+    .section-padding {
+        /* padding-top: 50px; */
+        padding-bottom: 50px;
+    }
+    
+    .custom-block {
+        position: relative;
+        overflow: hidden;
+        padding: 30px;
+        height: 100%;
+    }
+    
+    .row.slick {
+        overflow: hidden;
+    }
+    
+    .slick-slide {
+        margin: 0 10px;
+        /* ระยะห่างระหว่างภาพ */
+    }
+    
+    .slick-center img {
+        transform: scale(1.2);
+        /* ขนาดภาพเมื่ออยู่ตรงกลาง (1.2 เป็นต้นอย่าง) */
+        transition: transform 0.5s ease-in-out;
+        /* เพื่อทำให้การเปลี่ยนขนาดเนื่องจากการเลื่อนนิดหน่อย */
+    }
+    
+    .slick-carousel .slick-list {
+        overflow: visible;
+    }
+    
+    .slick-slide img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .slick-dots {
+        position: relative;
+        z-index: 2;
+        /* กำหนดค่า z-index เพื่อให้ slick dots อยู่ด้านบนของภาพที่ขยายขึ้น */
+        height: 60px;
+        /* ปรับสูงของ slick dots ตามต้องการ */
+    }
+    
+    .slick-carousel .image {
+        transform-origin: center center;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .slick-carousel img {
+        width: 100%;
+        /* ทำให้ภาพมีความกว้างเต็มตาม container */
+        height: auto;
+        /* ทำให้ภาพปรับสัดส่วนตามความกว้าง */
+        max-width: 150px;
+        /* ไม่ให้ภาพเกินขนาด container */
+        max-height: 350px;
+        /* ไม่ให้ภาพเกินขนาด container */
+    }
+    
+    .slick-carousel .slick-active .image:nth-child(2) {
+        transform: scale(1.2);
+    }
+    
+    .slick-initialized .slick-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    @media (max-width: 767px) {
+        .slick-carousel1 {
+            display: block;
+        }
+    }

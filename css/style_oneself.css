@@ -1,0 +1,389 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.section-padding {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.custom-block {
+  position: relative;
+  overflow: hidden;
+  padding: 70px 12%;
+  height: 100%;
+}
+
+.row.slick {
+  overflow: hidden;
+}
+
+.slick-center img {
+  transform: scale(1.3);
+  /* ขนาดภาพเมื่ออยู่ตรงกลาง (1.2 เป็นต้นอย่าง) */
+  transition: transform 0.5s ease-in-out;
+  /* เพื่อทำให้การเปลี่ยนขนาดเนื่องจากการเลื่อนนิดหน่อย */
+}
+
+.slick-carousel .slick-list {
+  overflow: visible;
+}
+
+.slick-slide {
+  margin: 50px 10px;
+  /* ระยะห่างระหว่างภาพ */
+}
+
+.slick-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.slick-dots {
+  position: relative;
+  z-index: 2;
+  /* กำหนดค่า z-index เพื่อให้ slick dots อยู่ด้านบนของภาพที่ขยายขึ้น */
+  top: -10px;
+}
+
+.slick-carousel .image {
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slick-carousel img {
+  width: 100%;
+  /* ทำให้ภาพมีความกว้างเต็มตาม container */
+  height: auto;
+  /* ทำให้ภาพปรับสัดส่วนตามความกว้าง */
+  width: 500px;
+  /* ไม่ให้ภาพเกินขนาด container */
+  height: 281px;
+  /* ไม่ให้ภาพเกินขนาด container */
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slick-carousel .slick-active .image:nth-child(2) {
+  transform: scale(1.2);
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0px;
+}
+
+.slick-initialized .slick-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* import */
+/* import */
+/* Color Theme */
+/* Color Theme */
+h2 {
+  font-family: "Prompt", sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(0, 8, 11);
+  margin-bottom: 48px;
+}
+
+h4 {
+  font-family: "Prompt", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(0, 8, 11);
+  margin: 0 0 12px 0;
+}
+
+h5 {
+  font-family: "Prompt", sans-serif;
+  font-size: 24px;
+  font-weight: 500px;
+  color: rgb(0, 8, 11);
+  margin: 0 0 26px 0;
+}
+
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: rgb(22, 70, 110);
+  margin: 0;
+  line-height: 1.5;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: rgb(0, 8, 11);
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+}
+
+.object-behide {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 1000px;
+  z-index: -2;
+}
+
+.button {
+  padding: 15px 0px;
+  border-radius: 30px;
+  border: solid rgb(246, 152, 163);
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  background-color: rgb(246, 152, 163);
+  text-align: center;
+  cursor: pointer;
+  font-size: large;
+}
+.button a {
+  padding: 15px 40px;
+  font-family: "Prompt";
+  font-size: 18px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.button:hover {
+  background-color: rgb(22, 70, 110);
+  border: solid rgb(22, 70, 110);
+}
+
+#section {
+  padding-bottom: 60px;
+}
+#section .video-background {
+  --bs-gutter-x: 0;
+}
+#section .video-background .video-box {
+  padding: 0;
+}
+#section .video-background .video-box .video-show {
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+
+#section_1 {
+  position: relative;
+}
+#section_1 .object-behide {
+  top: -50%;
+  right: 0;
+}
+#section_1 .object-behide .behide-video {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  z-index: -2;
+}
+#section_1 .object-behide .behide-video img {
+  width: 80%;
+}
+
+#section_2 {
+  position: relative;
+}
+#section_2 .ojt-box {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 2px solid rgb(22, 70, 110);
+  border-radius: 20%;
+}
+#section_2 .ojt-box h4 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 26px;
+  color: rgb(241, 237, 228);
+  -webkit-text-stroke: 2px rgb(22, 70, 110);
+}
+#section_2 .object-behide {
+  top: -40%;
+}
+#section_2 .object-behide .img-behide {
+  position: absolute;
+  left: 50%;
+  top: 0%;
+}
+#section_2 .object-behide .img-behide img {
+  opacity: 0.8;
+  width: 1100px;
+}
+
+#section_3 .toolkit-section {
+  padding-bottom: 60px;
+}
+#section_3 .toolkit-section .toolkit {
+  display: flex;
+  flex-direction: row;
+}
+#section_3 .toolkit-section .toolkit .toolkit-box {
+  margin-right: 50px;
+}
+#section_3 .toolkit-section .toolkit .toolkit-box .head_toolkits {
+  background-color: rgb(22, 70, 110);
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+#section_3 .toolkit-section .toolkit .toolkit-box .head_toolkits h4 {
+  color: rgb(241, 237, 228);
+  margin: 0;
+}
+#section_3 .toolkit-section .toolkit .toolkit-box .list {
+  display: flex;
+  flex-direction: row;
+}
+#section_3 .toolkit-section .toolkit .line {
+  padding: 50px 2px;
+  margin: 0 10px;
+  background-color: rgb(22, 70, 110);
+}
+#section_3 .target_group-section {
+  padding-top: 60px;
+}
+
+#section_4 {
+  position: relative;
+}
+#section_4 .object-behide {
+  top: -10%;
+}
+#section_4 .object-behide .img-behide {
+  position: absolute;
+  right: 60%;
+  top: 20%;
+}
+#section_4 .object-behide .img-behide img {
+  opacity: 0.8;
+  width: 800px;
+}
+
+#section_5 h5 {
+  color: rgb(22, 70, 110);
+  font-weight: bold;
+}
+
+#section_6 {
+  position: relative;
+}
+#section_6 .box-other {
+  padding: 0 20px;
+}
+#section_6 .box-other .glass-box {
+  border-radius: 25em;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+#section_6 .box-other .glass-box img {
+  width: 60%;
+}
+#section_6 .box-other .glass-box h4 {
+  font-size: 45px;
+  font-weight: bold;
+  margin: 12px 0;
+}
+#section_6 .object-behide {
+  top: 30%;
+  height: 80%;
+}
+#section_6 .object-behide .img-behide {
+  position: absolute;
+  right: 50%;
+  top: 0%;
+}
+#section_6 .object-behide .img-behide img {
+  opacity: 0.8;
+  width: 200%;
+}
+
+@media (max-width: 767px) {
+  .slick-carousel1 {
+    display: block;
+  }
+  .video-show {
+    width: 100%;
+    height: 80vh;
+  }
+  .slick-dots {
+    top: 2px;
+  }
+  .slick-dots li button:before {
+    font-size: 12px;
+  }
+  .slick-carousel img {
+    width: 281px;
+    height: 281px;
+  }
+  h2 {
+    text-align: center;
+    font-size: 45px;
+  }
+  #section_1 .col-lg-5 {
+    margin-bottom: 48px;
+  }
+  #section_1 .object-behide {
+    height: 1000px;
+    top: -20%;
+  }
+  #section_1 .object-behide .behide-video {
+    top: 0%;
+    left: 0%;
+  }
+  #section_1 .object-behide .behide-video img {
+    width: 150%;
+  }
+  #section_3 .toolkit-section .toolkit {
+    flex-direction: column;
+  }
+  #section_3 .toolkit-section .toolkit .toolkit-box {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  #section_3 .col-lg-5 {
+    margin-top: 48px;
+  }
+  #section_5 img {
+    margin-bottom: 48px;
+  }
+  #section_5 .botton-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #section_6 .container h2 {
+    margin: 0;
+  }
+  #section_6 .container .row .box-other .glass-box h4 {
+    font-size: 40px;
+  }
+  #section_6 .object-behide {
+    height: 70%;
+  }
+  #section_6 .object-behide .img-behide {
+    top: 50%;
+  }
+  #section_6 .object-behide .img-behide img {
+    width: 300%;
+  }
+}/*# sourceMappingURL=style_oneself.css.map */

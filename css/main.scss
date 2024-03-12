@@ -1,0 +1,900 @@
+@import "reset";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+$Background-color: rgb(255,
+255,
+255);
+//variable
+$Headline-main-size: 85px;
+$Headline-sub-size: 25px;
+$Headline-description-size: 16px;
+$Choice-main-size: 40px;
+$Choice-sub-size: 24px;
+$Choice-description-size: 18px;
+$Head-weight: 900;
+$Sub-weight: 500;
+$Description-weight: 400;
+//
+$Thai-font: 'Poppins';
+$Eng-font: 'Prompt';
+//
+$Font-head-size-default: 25px;
+$Font-head-size-1: 16px;
+$Font-head-size-2: 20px;
+$Font-head-size-3: 40px;
+$Font-secondhead-size-default: 16px;
+$Font-secondhead-size-1: 12px;
+$Font-secondhead-size-2: 14px;
+$Font-secondhead-size-3: 24px;
+$Font-text-size-default: 14px;
+$Font-text-size-1: 8px;
+$Font-text-size-2: 12px;
+$Font-text-size-3: 20px;
+$Font-head-weight-default: 900;
+$Font-head-weight-1: 900;
+$Font-head-weight-2: 900;
+$Font-head-weight-3: 900;
+$Font-secondhead-weight-default: 500;
+$Font-secondhead-weight-1: 500;
+$Font-secondhead-weight-2: 500;
+$Font-secondhead-weight-3: 500;
+$Font-text-weight-default: 500;
+$Font-text-weight-1: 500;
+$Font-text-weight-2: 500;
+$Font-text-weight-3: 500;
+//Color
+$Color_Nilkan: rgb(0,
+8,
+11);
+$Color_Gray: rgb(64,
+64,
+64);
+$Color_Kulap: rgb(246,
+152,
+163);
+$Color_Khram: rgb(22,
+70,
+110);
+$Color_Lueamluang: rgb(230,
+217,
+146);
+$Color_Khaophong: rgb(241,
+237,
+228);
+body {
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    place-content: center;
+    background: $Background-color;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    //font-family: 'Poppins';
+    overflow: hidden;
+}
+
+@keyframes thesis_topic {
+    0%,
+    3% {
+        transform: rotate(0)
+    }
+    22%,
+    27% {
+        transform: rotate(90deg)
+    }
+    47%,
+    52% {
+        transform: rotate(180deg)
+    }
+    72%,
+    77% {
+        transform: rotate(270deg)
+    }
+    98%,
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes bg_rotate {
+    0%,
+    3% {
+        transform: rotate(0)
+    }
+    22%,
+    27% {
+        transform: rotate(90deg)
+    }
+    47%,
+    52% {
+        transform: rotate(180deg)
+    }
+    72%,
+    77% {
+        transform: rotate(270deg)
+    }
+    98%,
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes bg_transition {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0;
+        width: 100vw;
+    }
+    50% {
+        transform: rotate(360deg);
+        opacity: 1.0;
+        width: 40vw;
+    }
+    100% {
+        transform: translateX(-83.3%);
+        width: 30vw;
+        opacity: 1.0;
+    }
+}
+
+@keyframes voiage_transition {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+        width: 100vw;
+    }
+    50% {
+        transform: translateX(0);
+        opacity: 1.0;
+        width: 40vw;
+    }
+    100% {
+        transform: translateX(-83.3%);
+        width: 30vw;
+        opacity: 1.0;
+    }
+}
+
+@keyframes logo_transition {
+    0% {
+        opacity: 1.0;
+    }
+    100% {
+        opacity: 0.0;
+        display: none;
+    }
+}
+
+//logo
+#voiage_logo_transition {
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+    //padding: 50px;
+    box-sizing: border-box;
+    z-index: 5;
+    background-color: $Background-color;
+    animation-name: logo_transition;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: 3s linear;
+    .logo_background_transition {
+        margin: 0 auto;
+        flex-direction: column;
+        z-index: 4;
+        //position: absolute;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        // animation-name: bg_transition;
+        // animation-duration: 4s;
+        img {
+            width: 40vw;
+            animation-name: bg_transition;
+            animation-duration: 4s;
+        }
+    }
+    .voiage_transition {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        z-index: 5;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        img {
+            width: 40vw;
+            filter: drop-shadow(1px 1px 10px $Background-color);
+            animation-name: voiage_transition;
+            animation-duration: 4s;
+        }
+    }
+}
+
+#voiage_logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    //align-items: center;
+    //padding: 15%;
+    align-content: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    //z-index: 5;
+    font-family: $Eng-font;
+    .logo_background {
+        // margin-bottom: 15%;
+        // margin-left: 5%;
+        margin: 0 auto;
+        flex-direction: column;
+        z-index: 4;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        img {
+            width: 30vw;
+        }
+    }
+    .voiage {
+        // margin-bottom: 15%;
+        // margin-left: 5%;
+        //padding-left: 2%;
+        //margin: 0 auto;
+        //position: absolute;
+        display: flex;
+        flex-direction: column;
+        // z-index: 4;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        img {
+            width: 15vw;
+            filter: drop-shadow(1px 1px 10px $Background-color);
+        }
+    }
+    .introduce {
+        margin: 0 auto;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        z-index: 4;
+        // position: absolute;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        //text-align: center;
+        h1 {
+            font-size: $Headline-main-size;
+            font-family: $Eng-font;
+            font-weight: bolder;
+            color: $Color_Nilkan;
+            padding-bottom: 1.5%;
+            text-shadow: 2px 2px 4px #5c5c5c;
+        }
+        h3 {
+            font-size: $Headline-sub-size;
+            font-family: $Eng-font;
+            font-weight: 600;
+            color: $Color_Khram;
+            padding-left: 1%;
+            padding-bottom: 2%;
+        }
+        h6 {
+            font-family: $Thai-font;
+            font-size: $Headline-description-size;
+            line-height: 1.5em;
+            font-weight: 400;
+            color: $Color_Khram;
+            padding-left: 1%;
+            padding-bottom: 2%;
+        }
+    }
+    .psuic {
+        display: flex;
+        flex-direction: row;
+        //margin-top: 10%;
+        padding: 2%;
+        left: 0;
+        top: 0;
+        img {
+            width: 200px;
+            opacity: 0.9;
+        }
+    }
+    .sponsors {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10%;
+        padding: 2%;
+        img {
+            padding: 2%;
+            width: 60px;
+            opacity: 0.9;
+        }
+    }
+}
+
+//slide area
+.gallery {
+    display: grid;
+    width: 30%;
+    height: 90%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    //Glassmorphism
+    // background: rgba(255, 255, 255, 0.23);
+    // border-radius: 500px;
+    // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    // backdrop-filter: blur(4.5px);
+    // -webkit-backdrop-filter: blur(4.5px);
+    // border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 25em;
+    background-color: rgba(255, 255, 255, .1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .2);
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-right: 2px solid rgba(255, 255, 255, .2);
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(5px);
+    //thesis information index
+    .slide {
+        margin: 0 auto;
+        padding: 10%;
+        gap: 20px;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        .thesislogo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            img {
+                width: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        h1 {
+            font-size: $Choice-main-size;
+            font-weight: $Head-weight;
+            margin: 0 0 10px;
+            text-align: center;
+            gap: 20px;
+            font-family: $Eng-font;
+        }
+        h3 {
+            font-size: $Choice-sub-size;
+            font-weight: $Sub-weight;
+            margin: 0 0 10px;
+            text-align: center;
+            font-family: $Eng-font;
+        }
+        h6 {
+            font-size: $Choice-description-size;
+            font-weight: $Description-weight;
+            margin: 0 0 10px;
+            text-align: start;
+            line-height: 1.2;
+            font-family: $Thai-font;
+        }
+        .button {
+            //margin-top: 20px;
+            padding: 15px 0px;
+            border-radius: 30px;
+            border: solid $Color_Kulap;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            background-color: $Color_Kulap;
+            text-align: center;
+            cursor: pointer;
+            font-size: large;
+            a {
+                padding: 15px 40px;
+                font-family: $Eng-font;
+                font-size: $Choice-description-size;
+                text-decoration: none;
+                color: $Background-color;
+            }
+        }
+        .button:hover {
+            background-color: $Color_Khram;
+            border: solid $Color_Khram;
+        }
+    }
+}
+
+.background_rotate {
+    position: absolute;
+    z-index: -1;
+    right: -30%;
+    top: 1%;
+    overflow: hidden;
+    animation: bg_rotate 20s infinite cubic-bezier(.5, -0.2, .5, 1.2);
+    img {
+        width: 80vw;
+        opacity: 0.6;
+    }
+}
+
+//Control rotation 
+.gallery>.slide {
+    grid-area: 1/1;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    transform-origin: -60% 0.7%;
+    transition: all 2s cubic-bezier(.5, -0.2, .5, 1.2);
+}
+
+//indicator 
+.dots {
+    position: absolute;
+    color: $Color_Khram;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    //z-index: 10;
+    li {
+        list-style: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid $Color_Nilkan;
+        margin: 20px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    li.active {
+        background-color: $Color_Nilkan;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        margin: 0 auto;
+        padding: 5%;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        place-content: center;
+        background: $Background-color;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    @keyframes thesis_topic {
+        0%,
+        3% {
+            transform: rotate(0)
+        }
+        22%,
+        27% {
+            transform: rotate(90deg)
+        }
+        47%,
+        52% {
+            transform: rotate(180deg)
+        }
+        72%,
+        77% {
+            transform: rotate(270deg)
+        }
+        98%,
+        100% {
+            transform: rotate(360deg)
+        }
+    }
+    @keyframes bg_rotate {
+        0%,
+        3% {
+            transform: rotate(0)
+        }
+        22%,
+        27% {
+            transform: rotate(90deg)
+        }
+        47%,
+        52% {
+            transform: rotate(180deg)
+        }
+        72%,
+        77% {
+            transform: rotate(270deg)
+        }
+        98%,
+        100% {
+            transform: rotate(360deg)
+        }
+    }
+    @keyframes bg_transition {
+        0% {
+            transform: rotate(0deg);
+            opacity: 0;
+            width: 100vw;
+        }
+        50% {
+            transform: rotate(360deg);
+            opacity: 1.0;
+            width: 60vw;
+        }
+        100% {
+            transform: translateY(-113.3%);
+            width: 40vw;
+            opacity: 1.0;
+        }
+    }
+    @keyframes voiage_transition {
+        0% {
+            transform: translateY(0);
+            opacity: 0;
+            width: 100vw;
+        }
+        50% {
+            transform: translateY(0);
+            opacity: 1.0;
+            width: 60vw;
+        }
+        100% {
+            transform: translateY(-293.3%);
+            width: 40vw;
+            opacity: 1.0;
+        }
+    }
+    @keyframes logo_transition {
+        0% {
+            opacity: 1.0;
+        }
+        100% {
+            opacity: 0.0;
+            display: none;
+        }
+    }
+    //logo
+    #voiage_logo_transition {
+        display: flex;
+        position: absolute;
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin: 0 auto;
+        //padding: 50px;
+        box-sizing: border-box;
+        z-index: 5;
+        background-color: $Background-color;
+        animation-name: logo_transition;
+        animation-delay: 4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: 3s linear;
+        .logo_background_transition {
+            margin: 0 auto;
+            flex-direction: column;
+            z-index: 4;
+            //position: absolute;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            // animation-name: bg_transition;
+            // animation-duration: 4s;
+            img {
+                width: 40vw;
+                animation-name: bg_transition;
+                animation-duration: 4s;
+            }
+        }
+        .voiage_transition {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            z-index: 5;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            img {
+                width: 40vw;
+                filter: drop-shadow(1px 1px 10px $Background-color);
+                animation-name: voiage_transition;
+                animation-duration: 4s;
+            }
+        }
+    }
+    #voiage_logo {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        //align-items: center;
+        padding: 0%;
+        align-content: center;
+        //margin: 0 auto;
+        box-sizing: border-box;
+        //z-index: 5;
+        font-family: $Eng-font;
+        .logo_background {
+            // margin-bottom: 15%;
+            // margin-left: 5%;
+            margin: 0 auto;
+            flex-direction: column;
+            z-index: 4;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            img {
+                width: 30vw;
+            }
+        }
+        .voiage {
+            // margin-bottom: 15%;
+            // margin-left: 5%;
+            //padding-left: 2%;
+            //margin: 0 auto;
+            //position: absolute;
+            display: flex;
+            flex-direction: column;
+            // z-index: 4;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            img {
+                width: 28vw;
+                filter: drop-shadow(1px 1px 10px $Background-color);
+            }
+        }
+        .introduce {
+            margin: 0 auto;
+            padding: 2%;
+            display: flex;
+            flex-direction: column;
+            z-index: 4;
+            // position: absolute;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            h1 {
+                font-size: 40px;
+                font-weight: bolder;
+                font-family: $Eng-font;
+                color: $Color_Nilkan;
+                padding-bottom: 1.5%;
+                text-shadow: 2px 2px 4px #5c5c5c;
+            }
+            h3 {
+                font-size: 12px;
+                font-weight: 600;
+                font-family: $Eng-font;
+                color: $Color_Khram;
+                padding-top: 2%;
+                padding-left: 1%;
+                padding-bottom: 2%;
+            }
+            h6 {
+                font-family: $Thai-font;
+                font-size: $Headline-description-size;
+                line-height: 1.5em;
+                font-weight: 400;
+                color: $Color_Khram;
+                padding-left: 1%;
+                padding-bottom: 2%;
+            }
+        }
+        .psuic {
+            display: flex;
+            flex-direction: row;
+            //margin-top: 10%;
+            //padding: 2%;
+            align-items: flex-start;
+            left: 0;
+            top: 0;
+            img {
+                width: 100px;
+                opacity: 0.9;
+            }
+        }
+        .sponsors {
+            display: flex;
+            flex-direction: row;
+            margin-top: 0%;
+            bottom: 0;
+            padding: 2%;
+            img {
+                padding: 2%;
+                width: 30px;
+                opacity: 0.9;
+            }
+        }
+    }
+    //slide area
+    .gallery {
+        display: grid;
+        width: 90%;
+        height: 80%;
+        overflow: hidden;
+        margin: 0 auto;
+        padding: 20px;
+        position: relative;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        //Glassmorphism
+        border-radius: 8em;
+        background-color: rgba(255, 255, 255, .1);
+        box-shadow: 0 25px 45px rgba(0, 0, 0, .2);
+        border: 2px solid rgba(255, 255, 255, .5);
+        border-right: 2px solid rgba(255, 255, 255, .2);
+        border-bottom: 2px solid rgba(255, 255, 255, .2);
+        backdrop-filter: blur(5px);
+        //thesis information index
+        .slide {
+            margin: 0 auto;
+            padding: 2%;
+            gap: 20px;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            .thesislogo {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                img {
+                    width: 70px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            h1 {
+                font-size: 20px;
+                font-weight: $Head-weight;
+                margin: 0 0 10px;
+                text-align: center;
+                gap: 20px;
+                font-family: $Eng-font;
+            }
+            h3 {
+                font-size: 14px;
+                font-weight: $Sub-weight;
+                margin: 0 0 10px;
+                text-align: center;
+                font-family: $Eng-font;
+            }
+            h6 {
+                font-size: 13px;
+                font-weight: $Description-weight;
+                margin: 0 0 10px;
+                text-align: start;
+                line-height: 1.2;
+                font-family: $Thai-font;
+            }
+            .button {
+                margin-top: -15px;
+                padding: 8px 0px;
+                border-radius: 30px;
+                border: solid $Color_Kulap;
+                align-items: center;
+                justify-content: center;
+                justify-items: center;
+                background-color: $Color_Kulap;
+                text-align: center;
+                cursor: pointer;
+                font-size: large;
+                a {
+                    padding: 8px 30px;
+                    font-family: $Thai-font;
+                    font-size: 12px;
+                    text-decoration: none;
+                    color: $Background-color;
+                }
+            }
+            .button:hover {
+                background-color: $Color_Khram;
+                border: solid $Color_Khram;
+            }
+        }
+    }
+    .background_rotate {
+        position: absolute;
+        z-index: -1;
+        right: 0%;
+        //bottom: 0%;
+        //align-items: start;
+        top: 70%;
+        overflow: hidden;
+        animation: bg_rotate 20s infinite cubic-bezier(.5, -0.2, .5, 1.2);
+        img {
+            width: 100vw;
+            opacity: 0.6;
+        }
+    }
+    //Control rotation 
+    .gallery>.slide {
+        grid-area: 1/1;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+        transform-origin: -60% 0.7%;
+        transition: all 2s cubic-bezier(.5, -0.2, .5, 1.2);
+    }
+    //indicator 
+    .dots {
+        position: absolute;
+        color: $Color_Khram;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        justify-content: center;
+        align-self: flex-end;
+        //z-index: 10;
+        .dot:nth-child(2) {
+            margin-right: 25%;
+        }
+        .dot:nth-child(3) {
+            margin-left: 25%;
+        }
+        li {
+            //margin-top: 20%;
+            list-style: none;
+            width: 15px;
+            height: 15px;
+            border: 2px solid $Color_Nilkan;
+            margin: 12px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        li.active {
+            background-color: $Color_Nilkan;
+        }
+    }
+}
